@@ -1,0 +1,48 @@
+plugins {
+	id 'application'
+	id 'checkstyle'
+	id 'jacoco'
+	id 'com.adarshr.test-logger' version '3.2.0'
+	id 'org.springframework.boot' version '3.0.2'
+	id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'hexlet.code'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+	mavenCentral()
+}
+
+application {
+	mainClass = 'hexlet.code.AppApplication'
+}
+
+jacoco {
+	toolVersion = "0.8.8"
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+testlogger {
+	showStandardStreams true
+}
+
+jacocoTestReport {
+	dependsOn test
+	reports {
+		xml.required = true
+	}
+}
+
+tasks.named('test') {
+	finalizedBy jacocoTestReport
+	useJUnitPlatform()
+}
+
+task stage(dependsOn: [clean, installDist])
+installDist.mustRunAfter clean
