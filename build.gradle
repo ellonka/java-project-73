@@ -11,12 +11,12 @@ group = 'hexlet.code'
 version = '1.0-SNAPSHOT'
 sourceCompatibility = '17'
 
-repositories {
-	mavenCentral()
-}
-
 application {
 	mainClass = 'hexlet.code.AppApplication'
+}
+
+repositories {
+	mavenCentral()
 }
 
 jacoco {
@@ -42,6 +42,12 @@ jacocoTestReport {
 tasks.named('test') {
 	finalizedBy jacocoTestReport
 	useJUnitPlatform()
+}
+
+jar {
+	manifest {
+		attributes('Main-Class': 'hexlet.code.AppApplication')
+	}
 }
 
 task stage(dependsOn: [clean, installDist])
