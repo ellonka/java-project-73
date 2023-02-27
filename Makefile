@@ -10,6 +10,9 @@ install:
 lint:
 	./gradlew checkstyleMain
 
+generate-migrations:
+	gradle diffChangeLog
+
 test:
 	./gradlew test
 
