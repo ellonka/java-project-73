@@ -12,3 +12,5 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 .DS_store
+/taskManager.mv.db
+/taskManager.trace.db
