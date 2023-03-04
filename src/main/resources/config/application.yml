@@ -5,7 +5,7 @@ base-url: /api
 
 spring:
   application:
-    name: taskManager
+    name: app
 
   liquibase:
     enabled: true
@@ -14,4 +14,7 @@ spring:
   mvc:
     hiddenmethod:
       filter:
-        enabled: true
+        enabled: false
+    security:
+      basic:
+        enabled: false
