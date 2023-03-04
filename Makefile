@@ -22,9 +22,6 @@ start-dist:
 lint:
 	./gradlew checkstyleMain checkstyleTest
 
-generate-migrations:
-	gradle diffChangeLog
-
 test:
 	./gradlew test
 
