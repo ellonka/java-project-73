@@ -42,7 +42,7 @@ public class User {
 
     @NotBlank
     @Size(min = 3, max = 100)
-    @JsonIgnore
+//    @JsonIgnore
     private String password;
 
     @CreationTimestamp
