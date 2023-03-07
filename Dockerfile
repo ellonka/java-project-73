@@ -2,8 +2,8 @@ FROM gradle:7.4.2-jdk17
 
 WORKDIR /app
 
-COPY ./ .
+COPY / .
 
 RUN gradle installDist
 
-CMD ./gradlew bootRun --args='--spring_profiles_active=prod'
+CMD ./build/install/app/bin/app
