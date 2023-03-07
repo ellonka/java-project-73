@@ -6,4 +6,4 @@ COPY ./ .
 
 RUN gradle installDist
 
-CMD ./build/install/app/bin/app
+CMD ./gradlew bootRun --args='--spring_profiles_active=prod'
