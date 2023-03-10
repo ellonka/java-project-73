@@ -63,7 +63,7 @@ dependencies {
 	)
 
 	runtimeOnly (
-			'com.h2database:h2:1.4.200',
+			'com.h2database:h2:2.1.214',
 			'org.postgresql:postgresql:42.2.24'
 	)
 
@@ -74,7 +74,6 @@ dependencies {
 			'com.tobedevoured.modelcitizen:spring:0.8.3'
 	)
 }
-
 
 testlogger {
 	showStandardStreams true
