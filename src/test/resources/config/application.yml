@@ -1,11 +1,11 @@
-server:
-  port: ${PORT:8080}
-
-base-url: /api
+base-url: ""
 
 spring:
   application:
     name: app
+
+  jpa:
+    show-sql: true
 
   liquibase:
     enabled: true
@@ -14,8 +14,8 @@ spring:
   mvc:
     hiddenmethod:
       filter:
-        enabled: false
+        enabled: true
 
-springdoc:
-  swagger-ui:
-    path: /swagger.html
+logging:
+  level:
+    root: INFO
