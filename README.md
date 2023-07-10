@@ -6,4 +6,4 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/d0f20bcb60401cbaae8a/test_coverage)](https://codeclimate.com/github/ellonka/java-project-73/test_coverage)
 
 ### App on Railway:
-java-project-73-production-50f2.up.railway.app
+https://java-project-73-production-50f2.up.railway.app/
